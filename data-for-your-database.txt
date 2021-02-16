@@ -1,5 +1,23 @@
 
 --
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'Category 1'),
+(2, 'Category 2'),
+(3, 'Category 3');
+
+--
 -- Table structure for table `records`
 --
 
