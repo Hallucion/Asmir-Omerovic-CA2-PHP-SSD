@@ -37,9 +37,14 @@ include('includes/header.php');
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>
+
+            <label>Detials:</label>
+            <input type="input" name="details">
+            <br>
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Record">
+            
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>
