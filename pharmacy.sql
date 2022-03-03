@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
+DROP DATABASE Pharmacy; 
+CREATE DATABASE Pharmacy;
 
 DROP TABLE IF EXISTS `categories`;
 DROP TABLE IF EXISTS `records`;
