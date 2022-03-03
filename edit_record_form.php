@@ -48,6 +48,11 @@ include('includes/header.php');
                    value="<?php echo $records['ingredients']; ?>">
             <br>
 
+            <label>Symptoms:</label>
+            <input type="input" name="symptoms"
+                   value="<?php echo $records['symptoms']; ?>">
+            <br>
+
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>            

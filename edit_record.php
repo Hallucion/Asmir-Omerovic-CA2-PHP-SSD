@@ -7,6 +7,7 @@ $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 $details = filter_input(INPUT_POST, 'details');
 $ingredients = filter_input(INPUT_POST, 'ingredients');
+$symptoms = filter_input(INPUT_POST, 'symptoms');
 
 // Validate inputs
 if ($record_id == NULL || $record_id == FALSE || $category_id == NULL ||
@@ -56,7 +57,8 @@ name = :name,
 price = :price,
 image = :image,
 details = :details,
-ingredients = :ingredients
+ingredients = :ingredients,
+symptoms = :symptoms
 WHERE recordID = :record_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':category_id', $category_id);
@@ -64,7 +66,8 @@ $statement->bindValue(':name', $name);
 $statement->bindValue(':price', $price);
 $statement->bindValue(':image', $image);
 $statement->bindValue(':details', $details);
-$statement->bindValue(`:ingredients`, $ingredients);
+$statement->bindValue(':ingredients', $ingredients);
+$statement->bindValue(':symptoms', $symptoms);
 $statement->bindValue(':record_id', $record_id);
 
 $statement->execute();

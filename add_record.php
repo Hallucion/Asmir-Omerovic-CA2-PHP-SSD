@@ -76,6 +76,7 @@ if ($category_id == null || $category_id == false ||
     $statement->bindValue(':image', $image);
     $statement->bindValue(':details', $details);
     $statement->bindValue(':ingredients', $ingredients);
+    $statement->bindValue(':symptoms', $symptoms);
     $statement->execute();
     $statement->closeCursor();
 

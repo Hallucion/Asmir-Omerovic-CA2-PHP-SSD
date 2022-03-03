@@ -45,6 +45,10 @@ include('includes/header.php');
             <label>Ingredients:</label>
             <input type="input" name="ingredients">
             <br>
+
+            <label>Symptoms:</label>
+            <input type="input" name="symptoms">
+            <br>
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Record">

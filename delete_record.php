@@ -8,6 +8,7 @@ $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 $details = filter_input(INPUT_POST, 'details');
 $ingredients = filter_input(INPUT_POST, 'ingredients');
+$symptoms = filter_input(INPUT_POST, 'symptoms');
 
 // Delete the product from the database
 if ($record_id != false && $category_id != false) {

@@ -70,6 +70,7 @@ include('includes/header.php');
 <th>Price</th>
 <th>Details</th>
 <th>Ingredients</th>
+<th>Symptoms</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -81,6 +82,7 @@ include('includes/header.php');
 <td class="right"><?php echo $record['price']; ?></td>
 <td><?php echo $record['details']; ?></td>
 <td><?php echo $record['ingredients']; ?></td>
+<td><?php echo $record['symptoms']; ?></td>
 
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
