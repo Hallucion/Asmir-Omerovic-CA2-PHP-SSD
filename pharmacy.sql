@@ -43,9 +43,14 @@ CREATE TABLE `categories`
 --
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Category 1'),
-(2, 'Category 2'),
-(3, 'Category 3');
+(1, 'Cough, Cold & Flus'),
+(2, 'Pain Relief'),
+(3, 'Nicotine Replacement'),
+(4, 'Eye & Ear Health'),
+(5, 'Selfcare & Skincare'),
+(6, 'Mouth & Oral Care'),
+(7, 'First Aid'),
+(8, 'Prescribed Illnesses');
 
 -- --------------------------------------------------------
 
@@ -59,27 +64,28 @@ CREATE TABLE `records` (
   `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `details` varchar(255) NOT NULL
+  `details` varchar(255) NOT NULL,
+  `ingredients` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `records`
 --
 
-INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`, `details`) VALUES
-(1, 1, 'Some text', '12.00','644471.jpg','test'),
-(2, 1, 'Some text', '15.00','233012.jpg','test'),
-(3, 1, 'Some text', '18.00','329484.jpg','test'),
-(4, 1, 'Some text', '10.00','644055.jpg','test'),
-(5, 1, 'Paracetamol', '17.99','Para.jpg','test'),
-(6, 2, 'Some text', '16.00','373465.jpg','test'),
-(7, 2, 'Some text', '19.00','373989.jpg','test'),
-(8, 2, 'Some text', '12.00','374104.jpg','test'),
-(9, 2, 'Some text', '10.00','4733.jpg','test'),
-(10, 2, 'Some text', '15.00','834551.jpg','test'),
-(11, 3, 'Some text', '13.00','908783.jpg','test'),
-(12, 3, 'Some text', '17.00','835545.jpg','test'),
-(13, 3, 'Some text', '19.00','119273.jpg','test');
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`, `details`,`ingredients`) VALUES
+(1, 1, 'Some text', '12.00','644471.jpg','test','test'),
+(2, 1, 'Some text', '15.00','233012.jpg','test','test'),
+(3, 1, 'Some text', '18.00','329484.jpg','test','test'),
+(4, 1, 'Some text', '10.00','644055.jpg','test','test'),
+(5, 1, 'Paracetamol', '17.99','Para.jpg','test','test'),
+(6, 2, 'Some text', '16.00','373465.jpg','test','test'),
+(7, 2, 'Some text', '19.00','373989.jpg','test','test'),
+(8, 2, 'Some text', '12.00','374104.jpg','test','test'),
+(9, 2, 'Some text', '10.00','4733.jpg','test','test'),
+(10, 2, 'Some text', '15.00','834551.jpg','test','test'),
+(11, 3, 'Some text', '13.00','908783.jpg','test','test'),
+(12, 3, 'Some text', '17.00','835545.jpg','test','test'),
+(13, 3, 'Some text', '19.00','119273.jpg','test','test');
 
 --
 -- Indexes for dumped tables

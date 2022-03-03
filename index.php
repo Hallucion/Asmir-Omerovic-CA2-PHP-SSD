@@ -42,11 +42,11 @@ $statement3->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-<h1>Record List</h1>
+<h1>Medicines & Treatements</h1>
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
+<h2>Perscriptions</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -69,6 +69,7 @@ include('includes/header.php');
 <th>Name</th>
 <th>Price</th>
 <th>Details</th>
+<th>Ingredients</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -79,6 +80,7 @@ include('includes/header.php');
 <td><?php echo $record['name']; ?></td>
 <td class="right"><?php echo $record['price']; ?></td>
 <td><?php echo $record['details']; ?></td>
+<td><?php echo $record['ingredients']; ?></td>
 
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">

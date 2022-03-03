@@ -3,21 +3,21 @@
 
 <!-- the head section -->
 <head>
-    <title>My Guitar Shop</title>
+    <title>My Pharmacy Central</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <!-- the body section -->
 <body>
-    <header><h1>My Guitar Shop</h1></header>
+    <header><h1>My Pharmacy Central</h1></header>
 
     <main>
-        <h2 class="top">Error</h2>
+        <h2 class="top">Error, Cannot Process, Please Try Again And Head Back To The Main Website</h2>
         <p><?php echo $error; ?></p>
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> My Pharmacy Central, Inc.</p>
     </footer>
 </body>
 </html>

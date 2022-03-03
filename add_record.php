@@ -1,11 +1,12 @@
 <?php
 
 // Get the product data
+$record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 $details = filter_input(INPUT_POST, 'details');
+$ingredients = filter_input(INPUT_POST, 'ingredients');
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
@@ -74,6 +75,7 @@ if ($category_id == null || $category_id == false ||
     $statement->bindValue(':price', $price);
     $statement->bindValue(':image', $image);
     $statement->bindValue(':details', $details);
+    $statement->bindValue(':ingredients', $ingredients);
     $statement->execute();
     $statement->closeCursor();
 
