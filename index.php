@@ -59,6 +59,12 @@ include('includes/header.php');
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
 
+
+<form action="phpSearch.php" method="post">
+<input id="search" name="search" type="text" placeholder="Type here">
+<input id="submit" type="submit" value="Search">
+</form>
+
 <table>
 <tr>
 <th>Image</th>

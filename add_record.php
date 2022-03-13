@@ -7,10 +7,12 @@ $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 $details = filter_input(INPUT_POST, 'details');
 $ingredients = filter_input(INPUT_POST, 'ingredients');
+$symptoms = filter_input(INPUT_POST, 'symptoms');
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-    $name == null || $price == null || $price == false ) {
+    $name == null || $details == null || $ingredients == null || $symptoms == null ||
+    $price == null || $price == false ) {
     $error = "Invalid product data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -66,9 +68,9 @@ if ($category_id == null || $category_id == false ||
 
     // Add the product to the database 
     $query = "INSERT INTO records
-                 (categoryID, name, price, image, details)
+                 (categoryID, name, price, image, details, ingredients, symptoms)
               VALUES
-                 (:category_id, :name, :price, :image, :details)";
+                 (:category_id, :name, :price, :image, :details, :ingredients, :symptoms)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
@@ -77,9 +79,11 @@ if ($category_id == null || $category_id == false ||
     $statement->bindValue(':details', $details);
     $statement->bindValue(':ingredients', $ingredients);
     $statement->bindValue(':symptoms', $symptoms);
+    $statement->bindValue(':record_id', $record_id);
     $statement->execute();
     $statement->closeCursor();
 
     // Display the Product List page
     include('index.php');
 }
+?>
