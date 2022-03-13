@@ -4,7 +4,7 @@
 <!-- the head section -->
 <head>
     <title>My Pharmacy Central</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <!-- the body section -->

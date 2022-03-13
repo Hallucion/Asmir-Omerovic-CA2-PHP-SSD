@@ -42,11 +42,8 @@ $statement3->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-<h1>Medicines & Treatements</h1>
 
-<aside>
 <!-- display a list of categories -->
-<h2>Perscriptions</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -56,13 +53,12 @@ include('includes/header.php');
 </li>
 <?php endforeach; ?>
 </ul>
-</nav>          
-</aside>
+</nav>
 
 <section>
-    
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
+
 <table>
 <tr>
 <th>Image</th>
@@ -105,8 +101,8 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Pharmaceuticals</a></p>
-<p><a href="category_list.php">Manage Pharmaceuticals</a></p>
+<button><a href="add_record_form.php">Add Pharmaceuticals</a></button>
+<button><a href="category_list.php">Manage Pharmaceuticals</a></button>   
 </section>
 <?php
 include('includes/footer.php');

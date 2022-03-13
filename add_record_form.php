@@ -13,7 +13,6 @@ $statement->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-        <h1>Add Record</h1>
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
 
@@ -26,36 +25,37 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
+            <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" placeholder="It's name....">
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price">
+            <input type="input" name="price" placeholder="It's price....">
             <br>        
             
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>
 
-            <label>Detials:</label>
-            <input type="input" name="details">
+            <label>Details:</label>
+            <input type="input" name="details" placeholder="It's details....">
             <br>
 
             <label>Ingredients:</label>
-            <input type="input" name="ingredients">
+            <input type="input" name="ingredients" placeholder="It's ingredients....">
             <br>
 
             <label>Symptoms:</label>
-            <input type="input" name="symptoms">
+            <input type="input" name="symptoms" placeholder="It's symptoms....">
             <br>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input class="button4" type="submit">
             
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+        <p><a href="index.php" class="button5">View Homepage</a></p>
     <?php
 include('includes/footer.php');
 ?>

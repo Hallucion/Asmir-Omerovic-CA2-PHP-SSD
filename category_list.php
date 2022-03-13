@@ -14,11 +14,10 @@
 <?php
 include('includes/header.php');
 ?>
-    <h1>Category List</h1>
-    <table>
+<table div class="manage">
         <tr>
             <th>Name</th>
-            <th>&nbsp;</th>
+            <th>Delete</th>
         </tr>
         <?php foreach ($categories as $category) : ?>
         <tr>
@@ -33,8 +32,9 @@ include('includes/header.php');
             </td>
         </tr>
         <?php endforeach; ?>
-    </table>
     <br>
+    </table>
+    
 
     <h2>Add Category</h2>
     <form action="add_category.php" method="post"
@@ -45,7 +45,7 @@ include('includes/header.php');
         <input id="add_category_button" type="submit" value="Add">
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
+    <p><a href="index.php" class="button5">Homepage</a></p>
 
     <?php
 include('includes/footer.php');
